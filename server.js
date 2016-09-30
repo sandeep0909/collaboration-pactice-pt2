@@ -4,7 +4,7 @@ var
   mongoose = require('mongoose'),
   bodyParser = require('body-parser'),
   logger = require('morgan'),
-  // bikeRoutes = require('./routes/bikes.js');
+  bikeRoutes = require('./routes/bikes.js');
 
 
 ////////Mongoose Connections//////////////
@@ -16,7 +16,7 @@ mongoose.connect('mongodb://localhost/bike-shop', function(err) {
 
 
 ///////Middleware//////
-app.user(log('dev'));
+app.use(logger('dev'));
 app.use(bodyParser.json());
 //////////////////////
 

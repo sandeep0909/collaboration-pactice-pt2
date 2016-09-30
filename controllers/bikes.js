@@ -16,7 +16,7 @@ module.exports = {
   //  no view yet
   },
   create: function(req, res){
-    Bike.create(req.body, function(err, bike)}{
+    Bike.create(req.body, function(err, bike){
       if (err){
         res.json({message: "Bike was not created"})
       } else {

@@ -2,8 +2,8 @@
 //Routes has been added. These routes will be used by controllers afetr we merge the task together
 
 var express = require('express'),
-    bikeRouter = express.router(),
-    bikesController = require(./controllers/bikes.js)
+    bikeRouter = express.Router(),
+    bikesController = require('../controllers/bikes.js')
 
   bikeRouter.route('/bikes')
     .get(bikesController.index)
