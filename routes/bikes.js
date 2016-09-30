@@ -1,8 +1,8 @@
 //code added by sandeep panigrahi on 9/30/2016
 //Routes has been added. These routes will be used by controllers afetr we merge the task together
 
-var express = require('express')
-    bikeRouter = express.router()
+var express = require('express'),
+    bikeRouter = express.router(),
     bikesController = require(./controllers/bikes.js)
 
   bikeRouter.route('/bikes')
@@ -12,6 +12,7 @@ var express = require('express')
   bikeRouter.route('/bikes/:id')
     .get(bikesController.show)
     .post(bikesController.update)
-    .delete(bikesController.destroy)
+    //<Sandeep> changed the method name from destroy to delete as the controller action is named as delete
+    .delete(bikesController.delete)
 
     module.exports = bikeRouter
