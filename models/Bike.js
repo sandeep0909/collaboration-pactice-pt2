@@ -7,4 +7,4 @@ var
     price: Number
   });
 
-module.exports = mongoose.model('Fruit', fruitSchema);
+module.exports = mongoose.model('Fruit', bikeSchema);
